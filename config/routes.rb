@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # Verb Path, to: "controller#action"
   get "/prices", to: "home#prices"
 
+  post "/prices", to: "home#prices"
+
 end

@@ -1,4 +1,15 @@
-<h1>Prices</h1>
 
+<% @quote["DISPLAY"]["#{@symbol.upcase}"]["USD"]["PRICE"] %>
 
+<% @quote["DISPLAY"].each do |key, value| %>
+<div class="jumbotron">
+  <h1 class="display-4"><%=  key %></h1>
+  <hr class="my-4">
+  <p class="lead">Price:<%= value["USD"]["PRICE"] %><br></p>
+  <p class="lead">24h High:<%= value["USD"]["HIGHDAY"] %><br></p>
+  <p class="lead">24h Low:<%= value["USD"]["LOWDAY"] %><br></p>
+  <p class="lead">MarketCap:<%= value["USD"]["MKTCAP"] %><br></p>
+<% end %>
+
+</div>
 
